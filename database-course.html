@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据库原理与应用 - 陈琳婷的学习页面</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#F5F7FA',
+            dark: '#333333',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-sm fixed w-full z-10">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-primary">陈琳婷的学习页面</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html#home" class="text-gray-600 hover:text-primary">首页</a>
+        <a href="index.html#courses" class="text-gray-600 hover:text-primary">课程</a>
+        <a href="index.html#about" class="text-gray-600 hover:text-primary">关于我</a>
+      </div>
+      <button class="md:hidden text-gray-600">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 课程内容 -->
+  <main class="container mx-auto px-4 pt-24 pb-12">
+    <!-- 课程头部 -->
+    <section class="mb-12">
+      <div class="bg-white rounded-lg shadow-sm p-8">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+            <i class="fa fa-database text-2xl text-primary"></i>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold text-dark">数据库原理与应用</h1>
+            <p class="text-gray-600">高职大二第一学期</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-secondary rounded-lg p-4">
+            <h3 class="font-semibold text-dark mb-2">课程类型</h3>
+            <p class="text-gray-600">专业核心课</p>
+          </div>
+          <div class="bg-secondary rounded-lg p-4">
+            <h3 class="font-semibold text-dark mb-2">前置课程</h3>
+            <p class="text-gray-600">Python基础、计算机应用基础</p>
+          </div>
+          <div class="bg-secondary rounded-lg p-4">
+            <h3 class="font-semibold text-dark mb-2">学习目标</h3>
+            <p class="text-gray-600">掌握数据库基本原理和SQL语言，能够设计和管理数据库系统</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">
+          本课程是商务数据分析与应用专业的核心课程，旨在培养学生掌握数据库系统的基本原理、设计方法和SQL编程技能。
+        </p>
+        <p class="text-gray-600">
+          通过本课程的学习，学生将具备数据库设计、SQL查询、数据库管理等能力，为后续的数据采集、数据分析等课程提供数据存储和管理的技术支持。
+        </p>
+      </div>
+    </section>
+
+    <!-- 课程大纲 -->
+    <section class="mb-12">
+      <div class="bg-white rounded-lg shadow-sm p-8">
+        <h2 class="text-2xl font-bold text-dark mb-6">课程大纲</h2>
+        <div class="space-y-6">
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第1章 数据库系统概述</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>数据库基本概念</li>
+              <li>数据库系统的组成</li>
+              <li>数据库系统的发展</li>
+              <li>数据库管理系统介绍</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第2章 数据模型</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>数据模型的基本概念</li>
+              <li>层次模型与网状模型</li>
+              <li>关系模型</li>
+              <li>E-R模型</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第3章 关系数据库</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>关系代数</li>
+              <li>关系演算</li>
+              <li>关系数据库的完整性</li>
+              <li>关系规范化理论</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第4章 SQL基础</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>SQL语言概述</li>
+              <li>数据定义语言（DDL）</li>
+              <li>数据查询语言（SELECT）</li>
+              <li>单表查询</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第5章 SQL高级查询</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>连接查询</li>
+              <li>嵌套查询</li>
+              <li>集合查询</li>
+              <li>数据更新语言（DML）</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第6章 数据库设计</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>数据库设计概述</li>
+              <li>需求分析</li>
+              <li>概念结构设计</li>
+              <li>逻辑结构设计</li>
+              <li>物理结构设计</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第7章 数据库管理</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>数据库安全性</li>
+              <li>数据库完整性</li>
+              <li>并发控制</li>
+              <li>数据库恢复</li>
+              <li>数据库备份与恢复</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第8章 MySQL数据库应用</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>MySQL数据库介绍</li>
+              <li>MySQL安装与配置</li>
+              <li>MySQL管理工具</li>
+              <li>Python连接MySQL</li>
+              <li>数据库应用案例</li>
+            </ul>
+          </div>
+          
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="text-xl font-semibold text-dark mb-2">第9章 数据库应用项目实战</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>项目需求分析</li>
+              <li>数据库设计</li>
+              <li>数据库实现</li>
+              <li>应用开发</li>
+              <li>项目展示与答辩</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 课程资源 -->
+    <section class="mb-12">
+      <div class="bg-white rounded-lg shadow-sm p-8">
+        <h2 class="text-2xl font-bold text-dark mb-6">课程资源</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-secondary rounded-lg p-4">
+            <h3 class="font-semibold text-dark mb-3 flex items-center">
+              <i class="fa fa-book mr-2 text-primary"></i> 推荐教材
+            </h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>《数据库系统概论》</li>
+              <li>《MySQL必知必会》</li>
+              <li>《数据库原理与应用》</li>
+            </ul>
+          </div>
+          <div class="bg-secondary rounded-lg p-4">
+            <h3 class="font-semibold text-dark mb-3 flex items-center">
+              <i class="fa fa-laptop mr-2 text-primary"></i> 工具软件
+            </h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>MySQL 8.0+</li>
+              <li>MySQL Workbench</li>
+              <li>Navicat（可选）</li>
+              <li>Python 3.8+</li>
+              <li>Pymysql</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 学习成果 -->
+    <section class="mb-12">
+      <div class="bg-white rounded-lg shadow-sm p-8">
+        <h2 class="text-2xl font-bold text-dark mb-6">学习成果</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-secondary rounded-lg p-4 text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa fa-check text-xl text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-dark mb-2">知识目标</h3>
+            <p class="text-gray-600">掌握数据库基本原理和SQL语言</p>
+          </div>
+          <div class="bg-secondary rounded-lg p-4 text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa fa-cogs text-xl text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-dark mb-2">技能目标</h3>
+            <p class="text-gray-600">能够设计和管理数据库系统，编写复杂SQL查询</p>
+          </div>
+          <div class="bg-secondary rounded-lg p-4 text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa fa-briefcase text-xl text-primary"></i>
+            </div>
+            <h3 class="font-semibold text-dark mb-2">职业目标</h3>
+            <p class="text-gray-600">为从事数据库管理和数据分析工作奠定基础</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-600">© 2026 陈琳婷的学习页面</p>
+    </div>
+  </footer>
+
+  <script>
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // 移动端菜单
+    const menuButton = document.querySelector('button.md\:hidden');
+    if (menuButton) {
+      menuButton.addEventListener('click', function() {
+        // 这里可以添加移动端菜单的显示/隐藏逻辑
+        alert('移动端菜单功能开发中');
+      });
+    }
+  </script>
+</body>
+</html>
