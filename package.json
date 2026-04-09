@@ -1,0 +1,16 @@
+{
+  "name": "personal-learning-page",
+  "version": "1.0.0",
+  "description": "陈琳婷的个人学习页面",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/"
+  },
+  "keywords": [
+    "personal",
+    "learning",
+    "page"
+  ],
+  "author": "陈琳婷",
+  "license": "MIT"
+}
